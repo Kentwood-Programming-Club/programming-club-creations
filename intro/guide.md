@@ -27,7 +27,7 @@ let variableName = variableValue;
 ```
 Note how every statement ends with a semicolon. This is so that the computer can seperate statements and run them in order.
 This means that we can have multiple statements in one line (although it isn't good practice):
-```
+```javascript
 let x1=0; let x2=1; let x3=2;
 ```
 Although we don't necessarily need spaces between statements, we absolutely do need spaces between keywords. How else would the computer recognize it as a keyword?
