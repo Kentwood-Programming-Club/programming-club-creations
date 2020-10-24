@@ -38,7 +38,7 @@ variable = newValue;
 ```
 This syntax is quite similar to math.
 If we already declared a variable, we don't need to declare it again:
-```
+```javascript
 let x = 0;
 x = 2;
 ```
