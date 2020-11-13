@@ -14,7 +14,7 @@ const EasyHTMLCanvas = {
         ctx.fillStyle = color;
         ctx.fillRect(posX, posY, sizeX, sizeY);
     },
-    drawCircle: function(ctx, posX, posY, radius) {
+    drawCircle: function(ctx, posX, posY, radius, color) {
         ctx.fillStyle = color;
         ctx.fillCircle(posX, posY, radius);
     },
