@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="easyhtmlcanvas.js"></script>
+    </head>
+    <body onload="main()"> <!-- When the document finishes loading, THEN we can run our javascript! -->
+        <script>
+            
+            // these variables are at the top so they can be accessed by both functions
+            let canvas; // we can't set it yet because the document hasn't loaded yet
+            let x = 0;
+
+            function drawStuff() {
+                EasyHTMLCanvas.clear(canvas);
+                        for (let i = 0; i <= 8; i++) {
+                            // the coordinates are x=cos(theta) and y=cos(theta) because an increasing angle allows us to make a circle using these functions
+                            // if you don't know about the unit circle yet don't worry about it
+                            EasyHTMLCanvas.drawSquare(
+                            canvas, 
+                            25 * 4 * Math.cos(Math.PI * 2 / 500 * x - (i * 500 / 4))  + (50 * 4), // a sine wave centered on the value 200 and deviates at most by 100
+                            25 * 4 * Math.sin(Math.PI * 2 / 500 * x - (i * 500 / 4))  + (50 * 4), 
+                            8, 8, 
+                            /*
+                            HSL:
+                            Hue - what color? (spectrum from 0-255)
+                            Saturation - how vibrant is the color? (less = more pale) (percent out of 100)
+                            Luminosity - how bright is it? (out of 100%)
+                            */
+                            EasyHTMLCanvas.genColorHSL(
+                                    200, // this is a sorta bluish greenish color
+                                    90,
+                                    30 * Math.sin(2 * Math.PI / 500 * x) + 50
+                                )
+                            );
+                        }
+                x++; // x increases by 1 for each increment
+            }
+
+            function main () {
+                canvas = EasyHTMLCanvas.createCanvas("drawing-window"); // create a canvas
+                setInterval(drawStuff, 10); // call drawStuff() every 10 milliseconds
+            }
+
+        </script>
+    </body>
+</html>
