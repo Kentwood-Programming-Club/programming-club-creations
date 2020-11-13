@@ -23,4 +23,5 @@ const EasyHTMLCanvas = {
     },
     genColorHSL: (h,s,l) => "hsl(" + h + ", " + s + "%, " + l + "%)",
     genColorRGB: (r,g,b) => "rgb(" + r + ", " + g + ", " + b + ")",
+    getDelayValue: (fps) => 1000 / fps, // i think this works
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- You MUST include this to be able to use the EasyHTMLCanvas api.-->
+        <script src="easyhtmlcanvas.js"></script>
+    </head>
+    <body onload="main()">
+        <script>
+            let canvas; 
+            let delay = EasyHTMLCanvas.getDelayValue(60); // our delay value between frames is the delay between frames when the framerate is 60 fps
+            let x = 0; // if you want to make animations you should have an increasing value that tracks amount of frames drawn
+
+            function drawStuff() {
+
+                // you can choose what to do here
+
+                
+
+                x++; // make sure to increase x to know what frame you're on! (this is kind of like a time variable)
+            }
+
+            function main() {
+                setInterval(drawStuff, delay); // comment this line out if you want to draw only one frame
+                // drawStuff(); // uncomment this line if you want to draw one frame
+            }
+        </script>
+    </body>
+</html>
