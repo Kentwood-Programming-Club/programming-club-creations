@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Test</title>
+</head>
+<html>
+    <!-- 
+        Do NOT look at the source code yet! This is just a demonstration of this concept.
+        
+        Also, I am well aware that there is no styling for this HTML document and that the data is being verified on the client side.
+        However, server-client interactions are beyond the scope of this activity and are quite difficult for beginners to set up.
+    -->
+    <body>
+        <h1>Test</h1>
+        <form>
+            <label for="field1">
+                What is 2+2?
+            </label>
+            <input type="number" id="field1" />
+            <br/>
+            <label for="field2">
+                Do you enjoy this club?
+            </label>
+            <select name="field2" id="field2">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br/>
+            <label for="field3">
+                Find the area under the curve of the function 2x+10 on the interval [2, 10].
+            </label>
+            <input type="number" id="field3" />
+            <br/>
+            <input type="submit" value="Submit" onclick="checkAnswers()"/>
+        </form>
+        <script>
+            window.lostFocus = false;
+            function onBlur() {
+                window.lostFocus = true;
+            }
+            window.addEventListener('blur', onBlur);
+            function checkAnswers() {
+                let x = document.getElementById("field1");
+                let y = document.getElementById("field2");
+                let z = document.getElementById("field3");
+                if (window.lostFocus) {
+                    window.alert("You switched tabs while taking this (non-academic) test.");
+                } else {
+                    window.alert("Question 1 correct: " + (parseInt(x.value) == 4)
+                    + "\nQuestion 2 correct: true" +
+                    "\nQuestion 3 correct: " + (parseInt(z.value) == 176));
+                }
+            }
+        </script>
+    </body>
+</html>
