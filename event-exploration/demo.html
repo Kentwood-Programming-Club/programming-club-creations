@@ -34,16 +34,21 @@
         </form>
         <script>
             window.lostFocus = false;
+            window.mouseLeft = false;
+            function onLeave() {
+                window.mouseLeft = true;
+            }
             function onBlur() {
                 window.lostFocus = true;
             }
             window.addEventListener('blur', onBlur);
+            window.addEventListener('mouseout', onLeave)
             function checkAnswers() {
                 let x = document.getElementById("field1");
                 let y = document.getElementById("field2");
                 let z = document.getElementById("field3");
-                if (window.lostFocus) {
-                    window.alert("You switched tabs while taking this (non-academic) test.");
+                if (window.lostFocus || window.mouseLeft) {
+                    window.alert("You switched tabs or your mouse exited the browser while you were taking this (non-academic) test.");
                 } else {
                     window.alert("Question 1 correct: " + (parseInt(x.value) == 4)
                     + "\nQuestion 2 correct: true" +
