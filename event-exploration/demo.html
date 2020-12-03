@@ -42,7 +42,7 @@
                 window.lostFocus = true;
             }
             window.addEventListener('blur', onBlur);
-            window.addEventListener('mouseout', onLeave)
+            document.body.addEventListener('mouseleave', onLeave)
             function checkAnswers() {
                 let x = document.getElementById("field1");
                 let y = document.getElementById("field2");
