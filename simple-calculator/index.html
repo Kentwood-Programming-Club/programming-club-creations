@@ -14,6 +14,9 @@
       $('.col-xs-3').addClass('center-all');
       $('p').addClass('center-all');
     });
+    $(window).on('resize', function() {
+      $('.col-xs-3').height($('.col-xs-3').width());
+    });
     </script>
   </head>
   <body class='align-middle'>
