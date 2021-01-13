@@ -11,21 +11,17 @@
 }
 
 .calc-button {
+  background-color: transparent;
   width: 90%;
   height: 90%;
   border: 2px solid black;
   border-radius: 15px;
-}
-
-@keyframes hover-animation {
-    0% {background-color: white;}
-    100% {background-color: lightskyblue;}
+  transition: .5s;
 }
 
 .calc-button:hover {
-    animation-name: hover-animation;
-    animation-duration: 0.5s;
-    animation-duration: normal;
+    background-color: lightskyblue;
+    transition: .5s;
 }
 
 .align-middle {
