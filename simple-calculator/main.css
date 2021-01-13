@@ -7,7 +7,15 @@
 }
 
 .col-xs-12 {
+  width: 100%;
+  align-items: middle;
+}
+
+#calc {
   border: 2px solid black;
+  width: 98%;
+  border-radius: 15px;
+  height: 15vh;
 }
 
 .calc-button {
