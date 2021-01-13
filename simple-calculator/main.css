@@ -17,6 +17,17 @@
   border-radius: 15px;
 }
 
+@keyframes hover-animation {
+    0% {background-color: white;}
+    100% {background-color: lightskyblue;}
+}
+
+.calc-button:hover {
+    animation-name: hover-animation;
+    animation-duration: 0.5s;
+    animation-duration: normal;
+}
+
 .align-middle {
   min-height: 100vh;
   display: flex;
