@@ -1,3 +1,7 @@
+body {
+  font-size: 25px;
+}
+
 .container {
   width: calc(100vh - 10vw);
 }
@@ -16,6 +20,9 @@
   width: 98%;
   border-radius: 15px;
   height: 15vh;
+  font-size: 40px;
+  padding-right: 12px;
+  text-align: right;
 }
 
 .calc-button {
@@ -49,6 +56,10 @@
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
+  }
+
+  #calc {
+    font-size: 1.1em;
   }
 
 }
