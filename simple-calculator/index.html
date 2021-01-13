@@ -14,9 +14,12 @@
       $('.col-xs-3').addClass('center-all');
       $('p').addClass('center-all');
     });
+    $(window).on('resize', function() {
+      $('.col-xs-3').height($('.col-xs-3').width());
+    });
     </script>
   </head>
-  <body>
+  <body class='align-middle'>
     <div class='container text-center'>
       <div class='row'>
         <div class='col-xs-3'>
@@ -62,12 +65,12 @@
       </div>
       <div class='row'>
         <div class='col-xs-3'>
+          <p class="calc-button">=</p>
         </div>
         <div class='col-xs-3'>
           <p class="calc-button">0</p>
         </div>
         <div class='col-xs-3'>
-          <p class="calc-button">=</p>
         </div>
         <div class='col-xs-3'>
           <p class="calc-button">÷</p>
