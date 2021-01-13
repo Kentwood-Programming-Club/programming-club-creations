@@ -24,6 +24,7 @@
 }
 
 .calc-button:hover {
+    background-color: lightskyblue;
     animation-name: hover-animation;
     animation-duration: 0.5s;
     animation-duration: normal;
