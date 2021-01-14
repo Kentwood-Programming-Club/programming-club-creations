@@ -7,7 +7,7 @@ function addHandler (element) {
 
         // WRITE CODE HERE
         function() {
-            let elementContents = element.innerHTML;
+            let elementContents = element.innerText;
             // is the button a number button or an operation?
         },
 
