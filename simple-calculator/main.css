@@ -1,5 +1,7 @@
 body {
   font-size: 25px;
+  background: rgb(0,212,255);
+background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%);
 }
 
 .container {
@@ -12,24 +14,30 @@ body {
 
 .col-xs-12 {
   width: 100%;
-  align-items: middle;
+  background: inherit;
 }
 
 #calc {
-  border: 2px solid black;
   width: 98%;
   border-radius: 15px;
   height: 15vh;
   font-size: 40px;
   padding-right: 12px;
   text-align: right;
+  background: inherit;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
 }
 
 .calc-button {
-  background-color: transparent;
+  background: inherit;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border-radius: 10px;
   width: 90%;
   height: 90%;
-  border: 2px solid black;
   border-radius: 15px;
   transition: .5s;
 }
