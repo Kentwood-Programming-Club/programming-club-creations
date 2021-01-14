@@ -9,19 +9,19 @@
     <link rel='stylesheet' type='text/css' href='main.css' />
     <title>Simple Calculator</title>
     <script>
-    $(document).ready(function() {
-      $('.col-xs-3').height($('.col-xs-3').width());
-      $('.col-xs-3').addClass('center-all');
-      $('p').addClass('center-all');
-    });
-    $(window).on('resize', function() {
-      $('.col-xs-3').height($('.col-xs-3').width());
-    });
-    function isAllowed(e) {
-      if(!(e.keyCode >= 48 && e.keyCode <= 57) && !(e.keyCode == 8) && !(e.keyCode == 61) && !(e.keyCode == 173) && !(e.keyCode == 191)) {
-        e.preventDefault();
+      $(document).ready(function() {
+        $('.col-xs-3').height($('.col-xs-3').width());
+        $('.col-xs-3').addClass('center-all');
+        $('p').addClass('center-all');
+      });
+      $(window).on('resize', function() {
+        $('.col-xs-3').height($('.col-xs-3').width());
+      });
+      function isAllowed(e) {
+        if(!(e.keyCode >= 48 && e.keyCode <= 57) && !(e.keyCode == 8) && !(e.keyCode == 61) && !(e.keyCode == 173) && !(e.keyCode == 191)) {
+          e.preventDefault();
+        }
       }
-    }
     </script>
   </head>
   <body class='align-middle'>

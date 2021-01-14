@@ -59,6 +59,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: none;
     transition: .5s;
+    cursor: pointer;
 }
 
 .align-middle {
