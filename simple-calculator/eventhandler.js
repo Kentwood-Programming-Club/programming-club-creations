@@ -18,7 +18,9 @@ function addHandler (element) {
                 } else {
                     // update secondOperand
                 }
-            }
+            } else if (false) {
+            } else if (false) {
+            } // use 'else if' to handle what to do for the other possible inputs (you can chain else ifs together like so) 
         },
 
     false);
