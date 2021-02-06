@@ -75,6 +75,10 @@ body {
   justify-content: center;
 }
 
+input:disabled {
+    color: #111111;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;

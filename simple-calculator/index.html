@@ -28,7 +28,7 @@
     <div class='container text-center'>
       <div class='row'>
         <div class='col-xs-12'>
-          <input type='text' id='calc' onkeydown='isAllowed(event)' />
+          <input type='text' disabled="" id='calc' onkeydown='/*isAllowed(event)*/'/>
         </div>
       </div><br/>
       <div class='row'>
@@ -81,6 +81,7 @@
           <p class="calc-button" id='0' >0</p>
         </div>
         <div class='col-xs-3'>
+            <p class="calc-button">.</p>
         </div>
         <div class='col-xs-3'>
           <p class="calc-button operation">÷</p>
@@ -89,5 +90,6 @@
     </div>
     <script src="variables.js"></script>
     <script src="eventhandler.js"></script>
+    <script src="arithmetic.js"></script>
   </body>
 </html>
