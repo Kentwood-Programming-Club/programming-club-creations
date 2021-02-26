@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .result {
+            padding: 20px;
+            margin: 5px;
+            border-radius: 5px;
+            border-width: 5px;
+            border-style: solid;
+        }
+        .accepted {
+            background-color: lightgreen;
+            color: darkgreen;
+            border-color: darkgreen;
+        }
+        .failed {
+            background-color: lightcoral;
+            color: darkred;
+            border-color: darkred;
+        }
+        .results-view {
+            align-content:center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        code {
+            background-color: rgba(0,0,0,0.1);
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <body>
+        <h1>Vector Tests</h1>
+        <div id="wrapper">
+            <h2>Vector Addition Tests:</h2>
+            <div id="add" class="results-view">
+
+            </div>
+            <h2>Vector Subtraction Tests:</h2>
+            <div id="subtract" class="results-view">
+
+            </div>
+        </div>
+        <script src="vectormath.js"></script> 
+        <script>
+
+            let addition_input1 = [
+                {
+                    x: 0,
+                    y: 0,
+                },
+                {
+                    x: 2, 
+                    y: 3
+                }
+            ];
+
+            let addition_input2 = [
+                {
+                    x: 1,
+                    y: 1
+                },
+                {
+                    x: -1,
+                    y: 0
+                }
+            ]
+
+            let addition_outputs = [
+                {
+                    x: 1,
+                    y: 1
+                },
+                {
+                    x: 1,
+                    y: 3
+                }
+            ];
+            
+            let subtraction_outputs = [
+
+            ];
+
+            function getResult(isSuccessful, inputData, outputData, expected) {
+                if (isSuccessful) {
+                    return "<div class='result accepted'>" +
+                                "<b>Test passed</b>" +
+                                "<p>Test data: </p>" +
+                                "<code>" +
+                                    inputData +
+                                "</code>" +
+                                "<p>Output: </p>" +
+                                "<code>" +
+                                    outputData +
+                                "</code>"
+                            "</div>";
+                } else {
+                    return "<div class='result failed'>" +
+                                "<b>Test failed</b>" +
+                                "<p>Test data: </p>" +
+                                "<code>" +
+                                    inputData +
+                                "</code>" +
+                                "<p>Real output: </p>" +
+                                "<code>" +
+                                    outputData +
+                                "</code>" +
+                                "<p>Expected output: </p>" +
+                                "<code>" +
+                                    expected +
+                                "</code>" +
+                            "</div>"; 
+                }
+            }
+            
+            for (let i = 0; i < addition_input1.length; i++) {
+                let res = vectorAdd(addition_input1[i], addition_input2[i]);
+                document.getElementById("add").innerHTML += getResult(
+                    JSON.stringify(res) == JSON.stringify(addition_outputs[i]),
+                    JSON.stringify(addition_input1[i]) + " + " + JSON.stringify(addition_input2[i]), 
+                    JSON.stringify(res), 
+                    JSON.stringify(addition_outputs[i])
+                );
+            }
+
+            for (let i = 0; i < addition_input1.length; i++) {
+                let res = vectorAdd(addition_input1[i], addition_input2[i]);
+                document.getElementById("subtract").innerHTML += getResult(
+                    JSON.stringify(res) == JSON.stringify(addition_outputs[i]),
+                    JSON.stringify(addition_input1[i]) + " - " + JSON.stringify(addition_input2[i]), 
+                    JSON.stringify(res), 
+                    JSON.stringify(addition_outputs[i])
+                );
+            }
+
+        </script>
+    </body>
+</html>

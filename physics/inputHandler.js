@@ -1,3 +1,5 @@
+// Look in globalVars.js to see how you can change the state of the app according to the input.
+
 function resizeCanvas() {
     context.canvas.width = window.innerWidth;
     context.canvas.height = window.innerHeight;
