@@ -1,3 +1,4 @@
+<!-- DO NOT EDIT ANYTHING ON THIS PAGE -->
 <!DOCTYPE html>
 <html>
     <style>
@@ -40,6 +41,10 @@
             <div id="subtract" class="results-view">
 
             </div>
+            <h2>Vector Magnitude Tests:</h2>
+            <div id="magnitude" class="results-view">
+
+            </div>
         </div>
         <script src="vectormath.js"></script> 
         <script>
@@ -78,9 +83,36 @@
             ];
             
             let subtraction_outputs = [
-
+                {
+                    x: -1,
+                    y: -1
+                },
+                {
+                    x: 3,
+                    y: 3
+                }
             ];
 
+            let magnitude_inputs = [
+                {
+                    x: 1,
+                    y: 1
+                },
+                {
+                    x: 2,
+                    y: 5
+                },
+                {
+                    x: Math.random(),
+                    y: Math.random()
+                }
+            ];
+            let magnitude_outputs = [
+                Math.SQRT2.toFixed(3),
+                Math.sqrt(Math.pow(2,2)+Math.pow(5,2)).toFixed(3),
+                Math.sqrt(Math.pow(magnitude_inputs[2].x,2)+Math.pow(magnitude_inputs[2].y,2)).toFixed(3)
+            ];
+                
             function getResult(isSuccessful, inputData, outputData, expected) {
                 if (isSuccessful) {
                     return "<div class='result accepted'>" +
@@ -129,7 +161,16 @@
                     JSON.stringify(res) == JSON.stringify(addition_outputs[i]),
                     JSON.stringify(addition_input1[i]) + " - " + JSON.stringify(addition_input2[i]), 
                     JSON.stringify(res), 
-                    JSON.stringify(addition_outputs[i])
+                    JSON.stringify(subtraction_outputs[i])
+                );
+            }
+
+            for (let i = 0; i < magnitude_inputs.length; i++) {
+                document.getElementById("magnitude").innerHTML += getResult(
+                    vectorMagnitude(magnitude_inputs[i]).toFixed(3) == magnitude_outputs[i],
+                    JSON.stringify(magnitude_inputs[i]), 
+                    vectorMagnitude(magnitude_inputs[i]), 
+                    JSON.stringify(magnitude_outputs[i])
                 );
             }
 
