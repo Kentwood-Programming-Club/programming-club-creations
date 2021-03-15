@@ -27,8 +27,8 @@ function vectorAdd(vector1, vector2) {
         y: vector1.y
     }
     // What to do here?
-    ret.x += 0;
-    ret.y += 0;
+    ret.x = 0;
+    ret.y = 0;
     return ret;
 }
 
@@ -38,4 +38,5 @@ function vectorSubtract(vector1, vector2) {
 
 function vectorMagnitude(vector) {
     // Remember, the magnitude of a vector is the same as it's "distance" as if it was graphed as a line.
+    return 0;
 }
