@@ -29,20 +29,20 @@ function select_operation() {
     }
 }
 
-function addHandler (element) {
+function addHandler(element) {
 
     element.addEventListener(
-        "click", 
+        "click",
 
         // WRITE CODE HERE
         function() {
             let elementContents = element.innerText;
             // is the button a number button or an operation?
 
-            if (parseInt(elementContents) >= 0 && parseInt(elementContents) <= 9){
+            if (parseInt(elementContents) >= 0 && parseInt(elementContents) <= 9) {
 
                 if (isEditingFirst) {
-                    firstOperand += ("" + elementContents); 
+                    firstOperand += ("" + elementContents);
                 } else {
                     secondOperand += ("" + elementContents);
                 }
@@ -82,7 +82,7 @@ function addHandler (element) {
 
         },
 
-    false);
+        false);
 
 }
 
