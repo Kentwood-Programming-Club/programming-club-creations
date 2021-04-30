@@ -41,4 +41,5 @@ table {
 
 .num {
   border-left: none;
+  border-top: 0.5px solid black;
 }
