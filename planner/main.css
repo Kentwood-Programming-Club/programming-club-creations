@@ -1,13 +1,33 @@
+body {
+  background: #5095E4;
+}
+
 td {
-    padding: 1%;
+  text-align: center;
+  padding-bottom: 0.5%;
+  border: 0.5px solid black;
 }
 #events-wrapper {
     width: 100vw;
     height: 50vh;
 }
+
+th, td {
+  border-top: none;
+}
+
+button {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 table {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
+    border-collapse: collapse;
 }
 
 .event {
@@ -19,7 +39,6 @@ table {
     border: 1px solid #223344;
 }
 
-*[contenteditable="true"] {
-    background-color: whitesmoke;
-    color: gray;
+.num {
+  border-left: none;
 }
