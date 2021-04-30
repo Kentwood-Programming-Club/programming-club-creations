@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>
-        Planner
-    </title>
+    <title>Planner</title>
     <link rel="stylesheet" href="main.css" />
     <script src="date_util.js" defer></script>
     <script src="api.js" defer></script>
@@ -12,9 +10,10 @@
 <html>
 
 <body>
-    <div id="events-wrapper">
+    <div class="events-wrapper">
         <table id="current-week">
-            <th>
+            <tr class="days">
+                <th></th>
                 <td>Sunday</td>
                 <td>Monday</td>
                 <td>Tuesday</td>
@@ -22,7 +21,7 @@
                 <td>Thursday</td>
                 <td>Friday</td>
                 <td>Saturday</td>
-            </th>
+            </tr>
             <tr id="hour0" class="hour-block"></tr>
             <tr id="hour1" class="hour-block"></tr>
             <tr id="hour2" class="hour-block"></tr>
