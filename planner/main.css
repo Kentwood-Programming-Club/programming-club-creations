@@ -1,0 +1,25 @@
+td {
+    padding: 1%;
+}
+#events-wrapper {
+    width: 100vw;
+    height: 50vh;
+}
+table {
+    width: 100vw;
+    height: 100%;
+}
+
+.event {
+    border-radius: 5px;
+    background-color: #aaccee;
+    color: white;
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid #223344;
+}
+
+*[contenteditable="true"] {
+    background-color: whitesmoke;
+    color: gray;
+}
