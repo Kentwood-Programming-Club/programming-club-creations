@@ -6,5 +6,5 @@ function get_hour_from_num(num) {
        else{
            return (num + " PM");
        }
-    // return "this still needs some work";
+    // Is it correct?
 }
