@@ -21,4 +21,4 @@ function get_hour_from_num(num) {
 
 // 13 PM issue resolved
 // add(changed) 12 AM so the day start with 12 AM, not 1 AM.
-// I erased all //'s so it seem better. (Of ocurse I understand that all) I wrote some :)
+// I erased all //'s so it seem better. (Of course I understand that all) I wrote some :)
